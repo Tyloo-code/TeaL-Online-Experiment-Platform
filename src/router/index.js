@@ -98,7 +98,7 @@ export const asyncRoutes = [
         path: "menu3",
         component: () => import("@/views/nested/menu3/index"),
         name: "Menu3",
-        meta: { title: "实验试卷管理",roles: ['Teacher','Maintainer'] }
+        meta: { title: "实验指导书",roles: ['Teacher','Maintainer'] }
       }
     ]
   },
