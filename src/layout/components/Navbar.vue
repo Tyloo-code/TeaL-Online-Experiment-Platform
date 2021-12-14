@@ -13,7 +13,7 @@
       <span class="right-menu-item" v-if="$store.getters.name !== 'undefined'"
         >你好 {{ $store.getters.name }}</span
       >
-      <span class="right-menu-item" v-else="$store.getters.name === 'undefined'"
+      <span class="right-menu-item" v-if="$store.getters.name === 'undefined'"
         >欢迎 林老师</span
       >
       <el-dropdown class="avatar-container" trigger="click">
@@ -22,7 +22,7 @@
           <i class="el-icon-caret-bottom" />
         </div>
         <el-dropdown-menu slot="dropdown" class="user-dropdown">
-          <router-link to="/">
+          <router-link to="/test">
             <el-dropdown-item> Home </el-dropdown-item>
           </router-link>
           <!-- <a target="_blank" href="https://github.com/PanJiaChen/vue-admin-template/">
