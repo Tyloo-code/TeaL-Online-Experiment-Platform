@@ -1,37 +1,37 @@
 <template>
   <div id="test">
-    <img
+    <!-- <img
       class="img"
       src="http://gxy.bjfu.edu.cn/gxy_root/resources/home/images/public/logo-bg.jpg"
       alt=""
-    />
+    /> -->
     <div class="swiper">
       <swiper :options="swiperOption" ref="mySwiper">
         <swiper-slide>
           <img
-            src=" http://sola.bjfu.edu.cn/images/cn/about_banner.jpg"
+            src=" http://lxy.bjfu.edu.cn/images/bigpic4.jpg"
             alt=""
-            style="width: 100%; height: 100%"
+            style="width: 100%; height: 460px"
         /></swiper-slide>
         <swiper-slide>
           <img
-            src="http://sola.bjfu.edu.cn/images/cn/details.jpg"
+            src="http://lxy.bjfu.edu.cn/images/bigpic3.jpg"
             alt=""
-            style="width: 100%; height: 100%"
+            style="width: 100%; height:460px"
           />
         </swiper-slide>
         <swiper-slide>
           <img
-            src=" http://sola.bjfu.edu.cn/images/cn/character_banner.jpg"
+            src="http://lxy.bjfu.edu.cn/images/bigpic.jpg"
             alt=""
-            style="width: 100%; height: 100%"
+            style="width: 100%; height: 460px"
           />
         </swiper-slide>
         <swiper-slide>
           <img
-            src=" http://sola.bjfu.edu.cn/images/cn/system_banner.jpg"
+            src=" http://lxy.bjfu.edu.cn/images/bigpic2.jpg"
             alt=""
-            style="width: 100%; height: 100%"
+            style="width: 100%; height: 460px"
         /></swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
         <div class="swiper-button-prev" slot="button-prev"></div>
@@ -46,7 +46,7 @@
     <div id="footer">
       <img
         class="img1"
-        src="https://homeworksystem.podolski.cn/Files/20211102025913-QQ截图20211102105756.jpg"
+        src="http://gxy.bjfu.edu.cn/gxy_root/resources/home/images/public/logo-bg.jpg"
       />
     </div>
   </div>
@@ -80,7 +80,6 @@ export default {
           prevEl: ".swiper-button-prev",
         },
       },
-      
     };
   },
   components: {
@@ -99,7 +98,6 @@ export default {
     console.log("this is current swiper instance object", this.swiper);
     // this.swiper.slideTo(3, 1000, false);
   },
-  
 };
 </script>
 
@@ -112,10 +110,10 @@ body {
 }
 #footer {
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   text-align: center;
   width: 100%;
-  height: 100px; /*脚部的高度*/
+  height: 90px; /*脚部的高度*/
   background: #1f1f1f;
   clear: both;
 }
@@ -124,16 +122,19 @@ body {
 }
 .img {
   width: 100%;
-  height: 80%;
+  height: 80px;
   margin: 0;
   padding: 0;
 }
 .img1 {
-  height: 105%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  
 }
 .title {
   margin-bottom: 30px;
-  margin-top: 56px;
+  margin-top: 20px;
   text-align: center;
   color: #195196;
   font-size: 56px;

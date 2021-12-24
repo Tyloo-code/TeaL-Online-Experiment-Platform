@@ -1,47 +1,13 @@
 import request from '@/utils/request'
 
-export function getQuestion(params) {
-  return request({
-    url: '/api/Questions',
-    method: 'get',
-    params
-  })
-}
-export function getQuizzes(params) {
-  return request({
-    url: '/api/Quizzes?$expand=questions',
-    method: 'get',
-    params
-  })
-}
-export function putaAnswers(params) {
-  return request({
-    url: '/api/StudentAnswer',
-    method: 'put',
-    params
-  })
-}
+export const getQuestion = params => request({url: '/api/Questions', method: 'get', params})
 
-export function putStudentAnswers(data) {
-  return request({
-    url: '/api/StudentAnswerGroups',
-    method: 'put',
-    data
-  })
-}
+export const getQuizzes = params => request({url: '/api/Quizzes?$expand=questions', method: 'get', params})
 
-export function deleteQ(data) {
-  return request({
-    url: '/api/Quizzes({2})',
-    method: 'delete',
-    data
-  })
-}
+export const putaAnswers = params => request({url: '/api/StudentAnswer', method: 'put', params})
 
-export function getStudentAnswers(params) {
-  return request({
-    url: '/api/StudentAnswerGroups?$expand=studentAnswers&student',
-    method: 'get',
-    params
-  })
-}
+export const putStudentAnswers = data => request({url: '/api/StudentAnswerGroups', method: 'put', data})
+
+export const deleteQ = data => request({url: '/api/Quizzes({2})', method: 'delete', data})
+
+export const getStudentAnswers = params => request({url: '/api/StudentAnswerGroups?$expand=studentAnswers&student', method: 'get', params})

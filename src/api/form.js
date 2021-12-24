@@ -1,71 +1,19 @@
 import request from '@/utils/request'
 
-export function getList(params) {
-  return request({
-    url: '/api/Students?$expand=class',
-    method: 'get',
-    params
-    
-  })
-}
+export const getList = params => request({url: '/api/Students?$expand=class', method: 'get', params})
 
-export function getodataList(odataroute) {
-  return request({
-    url: '/api/Students?$expand=class'+ odataroute,
-    method: 'get'
-  })
-}
-export function getaList(odataroute) {
-  return request({
-    url: '/api/classes'+ odataroute,
-    method: 'get'
-  })
-}
+export const getodataList = odataroute => request({url: '/api/Students?$expand=class'+ odataroute, method: 'get'})
 
-export function getclass(params) {
-  return request({
-    url: '/api/Classes',
-    method: 'get',
-    params
-  })
-}
+export const getaList = odataroute => request({url: '/api/classes'+ odataroute, method: 'get'})
 
-export function postList(data) {
-  return request({
-    url: '/api/Classes',
-    method: 'put',
-    data
-  })
-}
+export const getclass = params => request({url: '/api/Classes', method: 'get', params})
 
-export function putstudent(data) {
-  return request({
-    url: '/api/Students',
-    method: 'put',
-    data
-  })
-}
+export const postList = data => request({url: '/api/Classes', method: 'put', data})
 
-export function deleteList(id) {
-  return request({
-    url: `/api/Classes(${id})`,
-    method: 'delete'
-  })
-}
+export const putstudent = data => request({url: '/api/Students', method: 'put', data})
 
-export function deletestudent(id) {
-  return request({
-    url: `/api/Students(${id})`,
-    method: 'delete'
-  })
-}
+export const deleteList = id => request({url: `/api/Classes(${id})`, method: 'delete'})
 
+export const deletestudent = id => request({url: `/api/Students(${id})`, method: 'delete'})
 
-
-export function postfile(data) {
-  return request({
-    url: '/api/Import',
-    method: 'post',
-    data
-  })
-}
+export const postfile = data => request({url: '/api/Import', method: 'post', data})
